@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:45:50 by labderra          #+#    #+#             */
-/*   Updated: 2024/10/01 11:31:17 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:36:45 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ int	main(int argc, char **argv, char **envp)
 		add_history(str);
 		lexer(mini, str);
 		parser(mini);
-		run_export(mini, NULL);
-		//exec_line(mini);
+		//run_export(mini, NULL);
+		exec_line(mini);
+		
 		free_commands_and_tokens(mini);
 		
 

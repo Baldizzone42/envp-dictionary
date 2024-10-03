@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 11:07:06 by labderra          #+#    #+#             */
-/*   Updated: 2024/10/01 10:54:31 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/10/02 14:35:18 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ char	*triple_strjoin(char const *s1, char const *s2, char const *s3)
 
 int	run_command(t_mini *mini, t_command *cmd)
 {
-	if (!ft_strncmp(cmd->arg_array[0], "echo", ft_strlen(cmd->arg_array[0])))
-		cmd->exit_status = run_echo(mini, cmd);
-	else if (!ft_strncmp(cmd->arg_array[0], "pwd", ft_strlen(cmd->arg_array[0])))
-		cmd->exit_status = run_pwd(mini, cmd);	
+	/* if (!ft_strncmp(cmd->arg_array[0], "echo", ft_strlen(cmd->arg_array[0])))
+		cmd->exit_status = run_echo(mini, cmd); */
+/* 	else if (!ft_strncmp(cmd->arg_array[0], "pwd", ft_strlen(cmd->arg_array[0])))
+		cmd->exit_status = run_pwd(mini, cmd);	 */
   	/* else if (!ft_strncmp(cmd->arg_array[0], "export", ft_strlen(cmd->arg_array[0])))
 		run_export(mini, cmd); */
-	/*
+/* 	
 	else if (!ft_strncmp(s, "unset", ft_strlen(s)))
 		run_unset(cmd);
 	else if (!ft_strncmp(s, "env", ft_strlen(s)))
-		run_env(cmd);
-	else if (!ft_strncmp(s, "exit", ft_strlen(s)))
-		run_exit(cmd); */
+		run_env(cmd); */
+	if (!ft_strncmp(cmd->arg_array[0], "exit", ft_strlen(cmd->arg_array[0])))
+		run_exit(mini, cmd);
 	else
 		return (-1);
 	return (0);
